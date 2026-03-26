@@ -1,0 +1,211 @@
+---
+layout: default
+---
+
+<!-- Hero -->
+<section class="relative bg-farm-green overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-farm-green via-farm-green-light/40 to-farm-green"></div>
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-36">
+    <div class="max-w-3xl">
+      <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight">
+        Where Farm Life<br/>Meets Adventure
+      </h1>
+      <p class="mt-6 text-lg md:text-xl text-green-100 leading-relaxed max-w-2xl">
+        Meet our friendly alpacas and goats, pick sun-ripened blueberries, wander
+        the pumpkin patch, and stay the night in a cozy cabin or campsite under the stars.
+      </p>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4">
+        <a href="<%= site.metadata.booking_url %>" target="_blank" rel="noopener"
+           class="inline-flex items-center justify-center px-8 py-3.5 bg-farm-gold text-farm-brown font-bold rounded-lg hover:bg-farm-gold-light transition-colors text-lg shadow-lg">
+          Book Your Stay
+        </a>
+        <a href="#experiences"
+           class="inline-flex items-center justify-center px-8 py-3.5 border-2 border-white/40 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors text-lg">
+          Explore the Farm
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experiences Grid -->
+<section id="experiences" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+  <div class="text-center mb-16">
+    <h2 class="font-display text-3xl md:text-4xl font-bold text-farm-green">Farm Experiences</h2>
+    <p class="mt-4 text-lg text-farm-brown-light max-w-2xl mx-auto">
+      From cuddly alpacas to fresh-picked berries, there's something for everyone.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Animals -->
+    <div class="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden hover:shadow-md transition-shadow group">
+      <div class="h-48 bg-gradient-to-br from-farm-green/10 to-farm-green/5 flex items-center justify-center">
+        <span class="text-6xl">🦙</span>
+      </div>
+      <div class="p-6">
+        <h3 class="font-display text-xl font-bold text-farm-green mb-2">Meet the Animals</h3>
+        <p class="text-farm-brown-light text-sm leading-relaxed">
+          Say hello to our alpacas, Nigerian dwarf goats, and friendly ducks. Pet, feed,
+          and spend time with our farm family — perfect for kids and kids at heart.
+        </p>
+        <a href="<%= relative_url '/animals' %>" class="inline-block mt-4 text-sm font-semibold text-farm-green hover:text-farm-green-light transition-colors">
+          Learn more &rarr;
+        </a>
+      </div>
+    </div>
+
+    <!-- Blueberries -->
+    <div class="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden hover:shadow-md transition-shadow group">
+      <div class="h-48 bg-gradient-to-br from-indigo-50 to-purple-50 flex items-center justify-center">
+        <span class="text-6xl">🫐</span>
+      </div>
+      <div class="p-6">
+        <h3 class="font-display text-xl font-bold text-farm-green mb-2">Pick-Your-Own Blueberries</h3>
+        <p class="text-farm-brown-light text-sm leading-relaxed">
+          Summertime means rows of ripe blueberries ready for picking. Bring the family,
+          grab a bucket, and take home the freshest berries you've ever tasted.
+        </p>
+        <a href="<%= relative_url '/pick-your-own' %>" class="inline-block mt-4 text-sm font-semibold text-farm-green hover:text-farm-green-light transition-colors">
+          Seasonal info &rarr;
+        </a>
+      </div>
+    </div>
+
+    <!-- Pumpkins -->
+    <div class="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden hover:shadow-md transition-shadow group">
+      <div class="h-48 bg-gradient-to-br from-orange-50 to-amber-50 flex items-center justify-center">
+        <span class="text-6xl">🎃</span>
+      </div>
+      <div class="p-6">
+        <h3 class="font-display text-xl font-bold text-farm-green mb-2">Pumpkin Patch</h3>
+        <p class="text-farm-brown-light text-sm leading-relaxed">
+          When the leaves start turning, our pumpkin patch opens up. Find the
+          perfect pumpkin, enjoy fall activities, and make seasonal memories.
+        </p>
+        <a href="<%= relative_url '/pick-your-own' %>" class="inline-block mt-4 text-sm font-semibold text-farm-green hover:text-farm-green-light transition-colors">
+          Fall season &rarr;
+        </a>
+      </div>
+    </div>
+
+    <!-- Cabins -->
+    <div class="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden hover:shadow-md transition-shadow group">
+      <div class="h-48 bg-gradient-to-br from-amber-50 to-yellow-50 flex items-center justify-center">
+        <span class="text-6xl">🏡</span>
+      </div>
+      <div class="p-6">
+        <h3 class="font-display text-xl font-bold text-farm-green mb-2">Cozy Cabins</h3>
+        <p class="text-farm-brown-light text-sm leading-relaxed">
+          Extend your farm day into a farm getaway. Our cabins offer comfort and
+          charm with all the peace of the countryside.
+        </p>
+        <a href="<%= site.metadata.booking_url %>" target="_blank" rel="noopener" class="inline-block mt-4 text-sm font-semibold text-farm-green hover:text-farm-green-light transition-colors">
+          Book on HearthHost &rarr;
+        </a>
+      </div>
+    </div>
+
+    <!-- Camping -->
+    <div class="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden hover:shadow-md transition-shadow group">
+      <div class="h-48 bg-gradient-to-br from-emerald-50 to-green-50 flex items-center justify-center">
+        <span class="text-6xl">⛺</span>
+      </div>
+      <div class="p-6">
+        <h3 class="font-display text-xl font-bold text-farm-green mb-2">Campsites</h3>
+        <p class="text-farm-brown-light text-sm leading-relaxed">
+          Pitch your tent or park your RV on our spacious campsites. Fall asleep
+          to crickets and wake up to roosters — the real farm experience.
+        </p>
+        <a href="<%= site.metadata.booking_url %>" target="_blank" rel="noopener" class="inline-block mt-4 text-sm font-semibold text-farm-green hover:text-farm-green-light transition-colors">
+          Book on HearthHost &rarr;
+        </a>
+      </div>
+    </div>
+
+    <!-- Farm Store / Visit -->
+    <div class="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden hover:shadow-md transition-shadow group">
+      <div class="h-48 bg-gradient-to-br from-farm-cream to-stone-100 flex items-center justify-center">
+        <span class="text-6xl">🌻</span>
+      </div>
+      <div class="p-6">
+        <h3 class="font-display text-xl font-bold text-farm-green mb-2">Plan Your Visit</h3>
+        <p class="text-farm-brown-light text-sm leading-relaxed">
+          Day visits are welcome during open hours. Check seasonal
+          availability, directions, and what to bring for your farm day.
+        </p>
+        <a href="<%= relative_url '/about' %>" class="inline-block mt-4 text-sm font-semibold text-farm-green hover:text-farm-green-light transition-colors">
+          Visit info &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stays CTA Banner -->
+<section class="bg-farm-brown">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+      <div>
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-white">Stay a While</h2>
+        <p class="mt-3 text-stone-300 text-lg max-w-xl">
+          Book a cabin or campsite through HearthHost and turn your farm day into a
+          weekend getaway. Wake up to farm-fresh mornings and starry country nights.
+        </p>
+      </div>
+      <a href="<%= site.metadata.booking_url %>" target="_blank" rel="noopener"
+         class="shrink-0 inline-flex items-center px-8 py-4 bg-farm-gold text-farm-brown font-bold rounded-lg hover:bg-farm-gold-light transition-colors text-lg shadow-lg">
+        Browse Stays on HearthHost
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Seasonal Highlights -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+  <div class="text-center mb-16">
+    <h2 class="font-display text-3xl md:text-4xl font-bold text-farm-green">What's in Season</h2>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <!-- Summer -->
+    <div class="relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 md:p-10 border border-blue-100">
+      <span class="text-sm font-bold text-blue-600 uppercase tracking-wider">Summer</span>
+      <h3 class="font-display text-2xl font-bold text-farm-green mt-2">Blueberry Season</h3>
+      <p class="mt-3 text-farm-brown-light leading-relaxed">
+        June through August, our blueberry fields are open for pick-your-own.
+        Buckets provided — just bring your appetite and sunscreen.
+      </p>
+    </div>
+
+    <!-- Fall -->
+    <div class="relative bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-8 md:p-10 border border-orange-100">
+      <span class="text-sm font-bold text-orange-600 uppercase tracking-wider">Fall</span>
+      <h3 class="font-display text-2xl font-bold text-farm-green mt-2">Pumpkin Patch</h3>
+      <p class="mt-3 text-farm-brown-light leading-relaxed">
+        September through October, the patch is bursting with pumpkins of every size.
+        Hay rides, corn maze, and fall photo ops await.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter / Contact CTA -->
+<section class="bg-farm-green">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+    <h2 class="font-display text-3xl md:text-4xl font-bold text-white">Stay Connected</h2>
+    <p class="mt-4 text-green-100 text-lg max-w-2xl mx-auto">
+      Have questions or want to plan a visit? Reach out — we'd love to hear from you.
+    </p>
+    <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="mailto:<%= site.metadata.email %>"
+         class="inline-flex items-center px-8 py-3.5 bg-white text-farm-green font-bold rounded-lg hover:bg-farm-cream transition-colors">
+        Get in Touch
+      </a>
+      <a href="tel:<%= site.metadata.phone %>"
+         class="inline-flex items-center px-8 py-3.5 border-2 border-white/40 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
+        Call <%= site.metadata.phone %>
+      </a>
+    </div>
+  </div>
+</section>

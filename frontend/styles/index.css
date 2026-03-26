@@ -1,0 +1,20 @@
+/* Triggers frontend rebuilds */
+@import "jit-refresh.css";
+
+/* Tailwind */
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* Theme */
+@theme {
+  --color-farm-green: #2d5016;
+  --color-farm-green-light: #4a7c23;
+  --color-farm-gold: #d4a017;
+  --color-farm-gold-light: #f0c75e;
+  --color-farm-cream: #faf6ee;
+  --color-farm-brown: #5c3d2e;
+  --color-farm-brown-light: #8b6f47;
+  --color-farm-sky: #87ceeb;
+  --font-family-display: "Playfair Display", Georgia, serif;
+  --font-family-body: "Inter", system-ui, sans-serif;
+}

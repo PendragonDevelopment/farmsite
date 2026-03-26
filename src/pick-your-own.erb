@@ -1,0 +1,104 @@
+---
+layout: default
+title: Pick Your Own
+---
+
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <div class="text-center mb-16">
+    <h1 class="font-display text-4xl md:text-5xl font-bold text-farm-green">Pick Your Own</h1>
+    <p class="mt-4 text-lg text-farm-brown-light max-w-2xl mx-auto">
+      Nothing beats the taste of fruit picked straight from the field.
+      Join us for blueberry season in summer and pumpkin picking in fall.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+    <!-- Blueberries -->
+    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 md:p-10 border border-blue-100">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="text-4xl">🫐</span>
+        <div>
+          <h2 class="font-display text-2xl font-bold text-farm-green">Blueberries</h2>
+          <span class="text-sm font-semibold text-blue-600 uppercase tracking-wider">June &ndash; August</span>
+        </div>
+      </div>
+      <p class="text-farm-brown-light leading-relaxed mb-6">
+        Our blueberry fields come alive each summer with rows of plump, sweet berries.
+        We provide the buckets — you provide the picking power. A perfect family
+        outing on a sunny day.
+      </p>
+      <div class="bg-white/60 rounded-xl p-5">
+        <h3 class="font-semibold text-farm-green text-sm uppercase tracking-wider mb-3">What to Know</h3>
+        <ul class="space-y-2 text-sm text-farm-brown-light">
+          <li class="flex items-start gap-2">
+            <span class="text-farm-green mt-0.5">&#10003;</span>
+            Buckets and bags provided
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-farm-green mt-0.5">&#10003;</span>
+            Priced by the pound — pay for what you pick
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-farm-green mt-0.5">&#10003;</span>
+            No appointment needed during open hours
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-farm-green mt-0.5">&#10003;</span>
+            Bring sunscreen and closed-toe shoes
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Pumpkins -->
+    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-8 md:p-10 border border-orange-100">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="text-4xl">🎃</span>
+        <div>
+          <h2 class="font-display text-2xl font-bold text-farm-green">Pumpkin Patch</h2>
+          <span class="text-sm font-semibold text-orange-600 uppercase tracking-wider">September &ndash; October</span>
+        </div>
+      </div>
+      <p class="text-farm-brown-light leading-relaxed mb-6">
+        When autumn arrives, so do the pumpkins. Wander the patch and pick
+        your perfect pumpkin — from tiny decorative gourds to big carving beauties.
+      </p>
+      <div class="bg-white/60 rounded-xl p-5">
+        <h3 class="font-semibold text-farm-green text-sm uppercase tracking-wider mb-3">Fall Activities</h3>
+        <ul class="space-y-2 text-sm text-farm-brown-light">
+          <li class="flex items-start gap-2">
+            <span class="text-farm-green mt-0.5">&#10003;</span>
+            Pumpkins of every size and variety
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-farm-green mt-0.5">&#10003;</span>
+            Hay rides around the farm
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-farm-green mt-0.5">&#10003;</span>
+            Photo opportunities galore
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-farm-green mt-0.5">&#10003;</span>
+            Great for school and group field trips
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Booking tie-in -->
+<section class="bg-farm-brown">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+    <h2 class="font-display text-2xl md:text-3xl font-bold text-white mb-4">Make It a Weekend</h2>
+    <p class="text-stone-300 text-lg max-w-xl mx-auto mb-8">
+      Combine your picking adventure with an overnight stay.
+      Book a cabin or campsite and enjoy the farm at your own pace.
+    </p>
+    <a href="<%= site.metadata.booking_url %>" target="_blank" rel="noopener"
+       class="inline-flex items-center px-8 py-3.5 bg-farm-gold text-farm-brown font-bold rounded-lg hover:bg-farm-gold-light transition-colors text-lg shadow-lg">
+      Book on HearthHost
+    </a>
+  </div>
+</section>

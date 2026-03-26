@@ -1,0 +1,10 @@
+# Site settings
+title: "[Farm Name]"
+tagline: "Alpacas, Blueberries & Good Times"
+email: hello@example.com
+description: >-
+  A family agritourism farm featuring friendly alpacas, goats, and ducks,
+  pick-your-own blueberries and pumpkin patch, plus cozy cabins and campsites.
+phone: "(555) 123-4567"
+address: "123 Country Road, Anytown, State 12345"
+booking_url: "https://hearthhoststay.com"

@@ -1,0 +1,32 @@
+---
+layout: default
+title: News
+---
+
+<section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <h1 class="font-display text-4xl md:text-5xl font-bold text-farm-green mb-12 text-center">Farm News</h1>
+
+  <% if collections.posts.any? %>
+    <div class="space-y-8">
+      <% collections.posts.each do |post| %>
+        <article class="bg-white rounded-xl border border-stone-200 p-6 hover:shadow-md transition-shadow">
+          <a href="<%= post.relative_url %>" class="block">
+            <h2 class="font-display text-xl font-bold text-farm-green hover:text-farm-green-light transition-colors">
+              <%= post.data.title %>
+            </h2>
+            <time class="text-sm text-farm-brown-light mt-1 block" datetime="<%= post.data.date %>">
+              <%= post.data.date.strftime("%B %d, %Y") %>
+            </time>
+            <% if post.data.description %>
+              <p class="text-farm-brown-light mt-3 text-sm leading-relaxed"><%= post.data.description %></p>
+            <% end %>
+          </a>
+        </article>
+      <% end %>
+    </div>
+  <% else %>
+    <p class="text-center text-farm-brown-light text-lg py-12">
+      No news yet — check back soon for farm updates, seasonal announcements, and stories from the field.
+    </p>
+  <% end %>
+</section>

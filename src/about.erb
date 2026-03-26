@@ -1,0 +1,48 @@
+---
+layout: default
+title: About
+---
+
+<section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <div class="text-center mb-12">
+    <h1 class="font-display text-4xl md:text-5xl font-bold text-farm-green">Our Story</h1>
+  </div>
+
+  <div class="prose prose-lg prose-stone max-w-none">
+    <p>
+      We started with a simple dream: to create a place where families could slow
+      down, reconnect with nature, and experience the joy of farm life. What began
+      as a few acres and a handful of animals has grown into a beloved destination
+      for visitors from near and far.
+    </p>
+
+    <p>
+      Today, our farm is home to a herd of curious alpacas, playful Nigerian dwarf
+      goats, and a flock of friendly ducks. In the summer, our blueberry fields
+      open for pick-your-own, and when fall rolls around, the pumpkin patch
+      becomes the heart of the farm.
+    </p>
+
+    <p>
+      We also offer overnight stays through
+      <a href="<%= site.metadata.booking_url %>" target="_blank" rel="noopener">HearthHost</a> —
+      cozy cabins for those who want comfort and charm, and campsites for those
+      who prefer sleeping under the stars. Either way, you'll wake up to
+      fresh country air and the sounds of the farm.
+    </p>
+
+    <h2>Visit Us</h2>
+
+    <p>
+      We're located at <strong><%= site.metadata.address %></strong>.
+      Day visits are welcome during open hours — no appointment needed.
+      For group bookings, school trips, or private events, please reach
+      out in advance.
+    </p>
+
+    <p>
+      <strong>Phone:</strong> <a href="tel:<%= site.metadata.phone %>"><%= site.metadata.phone %></a><br/>
+      <strong>Email:</strong> <a href="mailto:<%= site.metadata.email %>"><%= site.metadata.email %></a>
+    </p>
+  </div>
+</section>
