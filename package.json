@@ -5,9 +5,14 @@
   "private": true,
   "scripts": {
     "esbuild": "node esbuild.config.js --minify",
-    "esbuild-dev": "node esbuild.config.js --watch"
+    "esbuild-dev": "node esbuild.config.js --watch",
+    "cf:dev": "bin/bridgetown build && wrangler pages dev",
+    "cf:deploy": "bin/bridgetown deploy && wrangler pages deploy",
+    "db:migrate:local": "wrangler d1 migrations apply farmstead-scorecard --local",
+    "db:migrate": "wrangler d1 migrations apply farmstead-scorecard --remote"
   },
   "devDependencies": {
+    "wrangler": "^4.123.0",
     "@tailwindcss/postcss": "^4.2.2",
     "@tailwindcss/typography": "^0.5.19",
     "esbuild": "^0.25.11",

@@ -21,6 +21,10 @@ node_modules
 # dotenv environment variables file
 .env
 
+# Cloudflare local secrets + wrangler local state
+.dev.vars
+.wrangler
+
 # Mac files
 .DS_Store
 
