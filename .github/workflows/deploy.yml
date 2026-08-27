@@ -1,0 +1,42 @@
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      # Ruby is pinned by .ruby-version (3.4.4) — built here, not on
+      # Cloudflare's build image, so the Ruby version is fully under our control.
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+      - run: npm install
+
+      - name: Build (Bridgetown → output/)
+        env:
+          BRIDGETOWN_ENV: production
+        run: bin/bridgetown deploy
+
+      # Deploys output/ as static assets + functions/ as Pages Functions.
+      # D1 binding is read from wrangler.jsonc.
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ecddf441d7f0e3155cea0baaeead86ba
+          command: pages deploy output --project-name fhhc-farmsite --branch main
