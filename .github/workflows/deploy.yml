@@ -7,11 +7,13 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    # Pinned rather than ubuntu-latest: that label is migrating to Ubuntu 26,
+    # and a deploy pipeline should not change OS underneath us unannounced.
+    runs-on: ubuntu-24.04
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       # Ruby is pinned by .ruby-version (3.4.12) — built here, not on
       # Cloudflare's build image, so the Ruby version is fully under our control.
@@ -21,7 +23,7 @@ jobs:
           bundler-cache: true
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: "22"
           cache: "npm"
@@ -33,9 +35,11 @@ jobs:
         run: bin/bridgetown deploy
 
       # Deploys output/ as static assets + functions/ as Pages Functions.
-      # D1 binding is read from wrangler.jsonc.
+      # D1 binding is read from wrangler.jsonc. No wranglerVersion input:
+      # the action picks up the wrangler devDependency installed above, so the
+      # deploying version is pinned by package.json rather than by the action.
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ecddf441d7f0e3155cea0baaeead86ba
