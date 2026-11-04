@@ -25,10 +25,10 @@ git_source(:codeberg) { "https://codeberg.org/#{_1}.git" }
 
 # If you need to upgrade/switch Bridgetown versions, change the line below
 # and then run `bundle update bridgetown`
-gem "bridgetown", "~> 2.1.2"
+gem "bridgetown", "~> 2.2.2"
 
 # Uncomment to add file-based dynamic routing to your project:
-# gem "bridgetown-routes", "~> 2.1.2"
+# gem "bridgetown-routes", "~> 2.2.2"
 
 # Puma is the Rack-compatible web server used by Bridgetown
 # (you can optionally limit this to the "development" group)
@@ -42,3 +42,14 @@ gem "puma", "< 8"
 # gem "nokolexbor", "~> 0.6"
 
 gem "bridgetown-seo-tag", "~> 7.0"
+
+# ---------------------------------------------------------------------
+# CVE floor pins on transitive dependencies. Not used directly by this
+# site — they arrive via other gems. Named here so a future
+# `bundle update` cannot resolve back below a patched version.
+# ---------------------------------------------------------------------
+
+# GHSA-wvg4-6p58-3gh3 (Rack::Static `header_rules` bypass via
+# unnormalized dot segments in the request path). Transitive via
+# bridgetown-core -> rackup/roda. Patched in 3.2.8.
+gem "rack", ">= 3.2.8", require: false
