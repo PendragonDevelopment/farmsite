@@ -7,6 +7,12 @@ output
 # Dependency folders
 node_modules
 
+# Ruby gems. CI (ruby/setup-ruby with bundler-cache) installs these into
+# vendor/bundle INSIDE the project. Tailwind v4 auto-detects content from
+# the project root and honors .gitignore, so leaving vendor/ untracked here
+# is what keeps gem sources and .rdoc docs out of the compiled CSS.
+vendor
+
 # Caches
 .sass-cache
 .npm
